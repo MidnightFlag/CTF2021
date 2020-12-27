@@ -21,26 +21,26 @@ En arrivant sur le challenge, on remarque directement que le challenge tourne so
 On observe les commentaires, et en effet, un en particulier est bizarre puisqu'il est en Russe et indique "Merci pour la vente"<br/>
 
 Dans le fichier robots.txt, on peut remarquer la ligne:<br/>
-![alt](robots.png)
+![alt](images/robots.png)
 <br/><br/>
 
 Par ailleurs, sur la page principale du site, tout en bas, on remarque:<br/>
-![alt](mainpage.png)
+![alt](images/mainpage.png)
 <br/><br/>
 
 On cherche donc une faille en rapport avec OpenSSL et "2014", et on tombe directement sur la faille du nom de "heartbleed", qui permet de leak de la mémoire d'un serveur.<br/>
 Pour l'exploitation, j'ai choisi d'utiliser le module metasploit pour exploiter la faille:<br/>
-![alt](metasploit1.png)
+![alt](images/metasploit1.png)
 <br/>
-![alt](metasploit2.png)
+![alt](images/metasploit2.png)
 <br/><br/>
 
 Dans ce leak mémoire, on remarque que la chaîne de caractères "7cf8a002dbc08c3f31aca619141d141d" reviens très régulièrement, on peut donc supposer que c'est le nom du fichier ou du dossier que l'on cherche.<br/>
-![alt](secret_folder.png)
+![alt](images/secret_folder.png)
 <br/><br/>
 
 Notre intuition était bonne, on tombe bien sur le dossier caché, on essaye donc de cliqué pour commander une arme auprès des tontons flingueurs:<br/>
-![alt](flag.png)
+![alt](images/flag.png)
 <br/>
 
 ### Flag
