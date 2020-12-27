@@ -21,22 +21,20 @@ Worty
 
 Pour se connecter à se challenge, il suffit de fournir un pseudo.<br/>
 On créé donc un pseudo, et on commence à regarder l'application, elle ressemble beaucoup à Winventory, normal, puisque c'est la même entreprise qui l'a développé.<br/>
-[!alt](mainpage.png)
+![alt](mainpage.png)
 
 On voit que l'on peut juste ajouter des secrets et voir ceux que l'on possède pour potentiellement les modifier / supprimer.<br/>
-Si l'on analyse la requête qui part quand on clique sur "modify" on observe ceci:
-[!alt](request.png)
+Si l'on analyse la requête qui part quand on clique sur "modify" on observe ceci:<br/>
+![alt](request.png)
 
 On pourrait tenter des injection SQL dans le champ passé, mais cela n'est pas efficace, en effet, côté serveur, cela est bien géré.<br/>
-On peut donc penser à une injection de type IDOR, pour pouvoir accéder aux secrets de tout le monde:
-[!alt](payload.png)
+On peut donc penser à une injection de type IDOR, pour pouvoir accéder aux secrets de tout le monde, la payload est donc la suivante:<br/>
+curl -X POST --data "142=" "http://localhost/IDOR/?page=manageOneSecret" --silent<br/>
+![alt](payload.png)
 
 Cela marche! On réussi à accéder aux secrets de tout le monde. Le secret de l'admin se trouve à l'id 142:
-[!alt](flag.png)
+![alt](flag.png)
 
 ### Flag
 
 MCTF{IDOR_1nj3t10n_t0_st34l_s3cr3ts}
-
-curl -X POST --data "142=" "http://localhost/IDOR/?page=manageOneSecret" --silent
-
