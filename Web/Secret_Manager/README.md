@@ -7,7 +7,7 @@ Web
 ### Description
 
 Après l'échec de son application Winventory, l'entreprise PHPBoomer a amélioré sa sécurité et a développé une nouvelle application.<br/>
-Secret Manager vous permet de stocker vos secrets sans que personne puisse y accéder<br/>
+Secret Manager vous permet de stocker vos secrets sans que personne puisse y accéder.<br/>
 Connaissant leur passé, on sait que la sécurité n'est pas maître chez eux..<br/>
 Vous pouvez tester l'application?
 
