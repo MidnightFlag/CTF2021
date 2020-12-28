@@ -376,21 +376,23 @@ async def showOneTask(ctx, idMember=None, *, name=None):
                     except:
                         await ctx.send("Bot cannot achieve the command. Error %s"%(e))
                         return
-                    
-            if(len(tasks) > 0):
-                index = [k for k,  tupl in enumerate(allMembers) if tupl[0] == tasks[0][1]]
-                if(len(index) > 0):
-                    member = allMembers[index[0]][1]
-                    msg = "%s have to done the task %s which consist to %s"%(member,name,tasks[0][0])
+            try:
+                if(len(tasks) > 0):
+                    index = [k for k,  tupl in enumerate(allMembers) if tupl[0] == tasks[0][1]]
+                    if(len(index) > 0):
+                        member = allMembers[index[0]][1]
+                        msg = "%s have to done the task %s which consist to %s"%(member,name,tasks[0][0])
+                    else: 
+                        msg = "Unknown member, displaying the gross result\n"
+                        member = tasks[0][1]
+                        msg += "%s have to done the task %s which consist to %s"%(member,name,tasks[0][0])
+                    await ctx.send(msg)
                 else: 
-                    msg = "Unknown member, displaying the gross result\n"
-                    member = tasks[0][1]
-                    msg += "%s have to done the task %s which consist to %s"%(member,name,tasks[0][0])
-                await ctx.send(msg)
-            else: 
-                index = [k for k,  tupl in enumerate(allMembers) if tupl[0] == int(idMember)]
-                member = allMembers[index[0]][1]
-                await ctx.send("Query error: %s is not existing for member %s."%(name,member))
+                    index = [k for k,  tupl in enumerate(allMembers) if tupl[0] == int(idMember)]
+                    member = allMembers[index[0]][1]
+                    await ctx.send("Query error: %s is not existing for member %s."%(name,member))
+            except:
+                await ctx.send("Query success : Empty result.")
     else:
         msg = "Unknown id "+idMember+" in your team. Available ids are:\n"
         for i in range(len(allMembers)):
