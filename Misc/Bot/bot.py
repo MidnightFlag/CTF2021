@@ -2,12 +2,12 @@ from discord.ext import commands
 from discord.ext.commands import CommandNotFound
 import discord
 import mysql.connector 
-TOKEN = "NzkyMDcwMDI4MzI1MDI3ODgw.X-YWsg.JoyQBJAx5Na5w0wO2bY2OGLIqas"
+TOKEN = "[REDACTED]"
 
 database = mysql.connector.connect(
   host="146.59.156.82",
-  user="discord_bot",
-  password="4n9pM8kAOjeL6pFwmgoD",
+  user="[REDACTED]",
+  password="[REDACTED]",
   database="bot",
   raise_on_warnings=True
 )
