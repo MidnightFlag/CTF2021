@@ -32,22 +32,6 @@ async def upgradeToAdmin(id,ctx):
     await ctx.send("Welcome back admins, check #general for order of the week.")
     return
 
-async def downgradeToGuest(ctx):
-    VC = discord.utils.get(ctx.guild.channels, name=str(ctx.channel))
-    adminrole = discord.utils.get(ctx.guild.roles, name="Admin")
-    for user in VC.members:
-        if(str(user.name) != "ManagerBot"): await user.remove_roles(adminrole)
-    return
-
-@bot.command(name='downgrade', help='For test.')
-async def downgrade(ctx):
-    cursor = database.cursor()
-    cursor.execute("UPDATE team SET isAdmin=0 WHERE id=1")
-    database.commit()
-    cursor.close()
-    await downgradeToGuest(ctx)
-    await ctx.send("Downgrade done.")
-
 @bot.command(name='author', help='Display author of this challenge.')
 async def author(ctx):
     await ctx.send("Worty for your pleasure <3")
