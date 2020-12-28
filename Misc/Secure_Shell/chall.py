@@ -3,7 +3,7 @@ import sys
 def main():
     print('''Welcome to Secure Shell V1.0
 This secure software is developed in python, and offers a new way to manage user rights.
-This way to manager rights is to define which file user can't read. Example: secret_file.txt
+This way to manager rights is to define which file user can't read.
 You can leave the shell with exit command.
 
         Note : This is a test version. If you find any bug contact:
@@ -11,6 +11,7 @@ You can leave the shell with exit command.
     ''')
     while True:
         pwd = subprocess.check_output(['pwd']).decode().strip("\n")
+        if(pwd == "/home/worty"): pwd = "~"
         command = input("user@secureshell:%s$ "%(pwd))
         try:
             if("secret_file.txt" in command.lower()):
@@ -37,7 +38,6 @@ You can leave the shell with exit command.
                         else:
                             print("You don\'t have the rights to see content of other folders/files.")
         except Exception as e:
-            print(e)
             print("Bad command.")
 if __name__ == "__main__":
     main()
