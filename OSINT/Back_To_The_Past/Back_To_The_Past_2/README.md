@@ -17,7 +17,7 @@ Kazuno
 ### Solution
 
 
-D'après le challenge précédent, on sait que :<br/><br/>
+D'après le challenge précédent, on sait que :<br/>
 
  - Jacques Houzit à donné rendez-vous à une personne place de la République à Rennes
  - Le Pastebin et le GitHub ont été créé le 6/02/2021 et le message du challenge précédent indique "Rendez-vous demain à 14h"
