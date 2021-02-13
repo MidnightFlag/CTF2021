@@ -1,1 +1,52 @@
+# Back To The Past 3/3
 
+### Catégorie
+
+OSINT
+
+### Description
+
+Back To The Past 3/3 (Difficulté : Difficile) // 3 essais maximum
+
+Jacques Houzit a été licencié car il consommait du cannabis pendant son temps de travail. Le directeur le suspecte de s'être fournit sur une plaque tournante à l'étranger.
+Retrouvez dans quel pays il est parti cet été.
+
+Format : MCTF{Pays} 
+
+### Auteur 
+
+Kazuno
+
+### Solution
+
+Grâce au challenge précédent, nous avons maintenant accès au compte Twitter de Jacques Houzit.<br/><br/>
+On fouille un peu et on remarque qu'il est suivit par "Archangel", celui avec qui il avait eu rendez-vous à Rennes le 7/02/2021 :<br/>
+![alt](images/follow.png)
+<br/>
+
+On se rend donc sur son compte Twitter à la recherche d'infomations intéressante.<br/>
+On peut remarquer deux choses intéressantes :
+- Le mail de contact épinglé sur son Twitter<br/>
+- Un Tweet ou l'on peut comprendre qui l'est partit en vacance avec Jacques Houzit<br/><br/>
+![alt](images/contact.png)
+![alt](images/tweet.png)
+<br/>
+<br/>
+A partir de ces informations, on se doute qu'il faut enquetter sur Archangel afin d'obtenir des informations sur le lieu de leur voyage.<br/>
+On retourne sur l'adresse mail qui est épinglé sur le Twitter.<br/><br/>
+Il est possible d'obtenir beaucoup d'information simplement avec une adresse mail.<br/>
+Par exemple, un outil très utilisé en OSINT est Ghunt, qui permet d'obtenir des informations sur un compte google à partir d'une adresse mail.<br/>
+On regarde donc du côté de Ghunt pour voir si l'adresse mail appartient à un compte Google et si des informations son disponible sur celui-ci :<br/>
+
+![alt](images/ghunt.png)
+<br/>
+
+Bingo ! Ghunt nous retourne même un lien vers un avis posté par ce compte Google :<br/>
+![alt](images/avis.png)
+<br/><br/>
+
+L'avis dit qu'il s'est rendu sur le lac de Rara au Népal avec un ami à lui cet été. Or, sur son profil tweeter on a pu lire un tweet ou il repenssait a un voyage avec Jacques Houzit.
+
+### Flag
+ 
+MCTF{Népal}
