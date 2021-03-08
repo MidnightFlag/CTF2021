@@ -23,7 +23,22 @@ A0d3n
 
 ### Solution
 
-...
+Ouvrir le fichier au format mp4 dans Audacity<br/>
+
+![alt](images/mainaudacity.png)
+<br/><br/>
+
+Puis, on sélectionne l'option "Spectrogramme" dans le menu déroulant de notre piste audio.
+
+![alt](images/spectrogramme_option.png)
+<br/><br/>
+
+Enfin, on modifie la vitesse de lecture de notre piste audio au maximum.
+
+![alt](images/modif_vitesse.png)
+<br/><br/>
+
+Voilà, vous venez de trouver le flag !
 
 ### Flag
 
