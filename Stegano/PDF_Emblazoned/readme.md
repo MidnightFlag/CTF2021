@@ -8,8 +8,6 @@ Stegano
 
 ...
 
-Format : MCTF{}
-
 ### Auteur
 
 A0d3n
@@ -20,4 +18,4 @@ A0d3n
 
 ### Flag
 
-MCTF{14,5718°S-175,4785°E}
+MCTF{}
