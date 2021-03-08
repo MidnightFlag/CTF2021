@@ -26,14 +26,14 @@ On peut alors essayer de le décoder de plusieurs manière différentes :
 J'ai une préférence pour la deuxième solution.<br/><br/>
 
 On se rend sur le site : https://morsecode.world/international/decoder/audio-decoder-adaptive.html et on upload l'audio : <br/>
-![alt](images/audio.png)
+![alt](images/audio.PNG)
 <br/>
 
 On peut alors distinguer le code morse et commencer à le réecrire au propre, on obitent alors :<br/>
 .-.. ...-- -.-. .... ....- -. - -.. ..- .-.. ----- ..- .--.<br/><br/>
 
 On le decode via le site : https://www.dcode.fr/code-morse et on obtient le flag :<br/>
-![alt](images/decode.png)
+![alt](images/decode.PNG)
 <br/>
 
 ### Flag
