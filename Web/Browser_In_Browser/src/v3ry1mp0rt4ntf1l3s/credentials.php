@@ -1,3 +1,3 @@
 <?php
-//MCTF{ssrf_l34d_t0_rc3_!!}
+//MCTF{ssrf_t0_4cc3ss_4dm1n_p4rt}
 ?>
