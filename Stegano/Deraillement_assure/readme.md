@@ -12,7 +12,7 @@ Selon nos renseignements, il commencait à s'intéresser à la cybersécurité. 
 
 On a trouvé un message dans un fichier texte, les supérieurs veulent vous tester avec ! <br/>
 
-Trouvé l'auteur et nous considérerons que vous avez du potentiel ! <br/>
+Trouvé l'auteur (Prénom Nom) et nous considérerons que vous avez du potentiel pour poursuivre ! <br/>
 
 Bonne chance Citoyenne/Citoyen ! <br/>
 
