@@ -24,7 +24,7 @@ On va donc directement s'intéresser à la page de recherche, on peut donc facil
 
 On voit que les inputs utilisateurs sont quand même filtrées, pour éviter de requêter sur le localhost. Ici, on tente d'exploiter une faille de type SSRF.<br/>
 Après un peu de recherche sur internet, on trouve des moyens de bypass cette restriction:<br/>
-![alt](images/localhost_access_index.png)
+![alt](images/localtest_access_index.png)
 <br/><br/>
 
 On a donc trouvé un moyen de leak la page "index" mais avec comme adresse IP "127.0.0.1", on a donc maintenant le nom de la page admin : "admin_panel.php"<br/>
