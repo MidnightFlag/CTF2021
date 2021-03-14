@@ -7,13 +7,14 @@ Stegano
 ### Description
 
 La NASA vient de recevoir les premières images de son nouveau rover marsien Perseverance<br/>
-Cependant le Command Control aurait un problème... Selon eux, le vent martien brouillerait les communications avec le rover.<br/>
 
-En tant que fin connaisseur, vous sentez que quelque chose cloche mais quoi...<br/>
+Depuis quelques heures, le Command Control aurait des problèmes pour envoyer les instructions au rover... Selon eux, le vent martien brouillerait les communications avec le rover.<br/>
+
+En tant que fin connaisseur, vous sentez que quelque chose cloche, mais quoi...<br/>
 
 Votre but est de trouver ce détail et de prévenir la NASA au plus vite.<br/>
 
-Bonne chance Citoyen ! <br/>
+Bonne chance citoyenne, citoyen ! <br/>
 
 Format : MCTF{}
 
