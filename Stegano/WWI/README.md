@@ -8,7 +8,7 @@ Stéganographie (Difficulté : Facile)
 
 Un enregistrement audio datant de la Première Guerre mondiale a été retrouvé. Il a été transmis depuis un sous-marin français. Pouvez-vous vérifier qu'il ne contient pas de message caché ?
 
-Format : MCTF{}
+Format : MCTF{FLAG}
 
 ### Auteur 
 
