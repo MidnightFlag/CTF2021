@@ -24,7 +24,7 @@ On fait donc une petite cherche Google :</br>
 ![alt](images/google.png)
 <br/>
 
-La recherche nous ressort un lien LinkedIn en premier lien, on visite donc ce compte :</br/>
+La recherche nous ressort un lien LinkedIn en premier lien, on visite donc ce compte :</br>
 ![alt](images/linke.png)
 <br/>
 
