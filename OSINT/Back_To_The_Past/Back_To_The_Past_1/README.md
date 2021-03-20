@@ -33,26 +33,31 @@ Le compte semble appartenir à Jacque Houzit et correspond avec les informations
 On peut remarquer aussi qu'un site personnel est rattaché à ce compte, on décide donc d'aller le visiter :<br/>
 ![alt](images/git.png)
 <br/>
-On est redirigé vers son compte GitHub, on décide donc d'investir un peu à la recherche de données intéréssante.<br/>
 <br/>
-Après quelques minutes on peut trouver un répertoire nommé "Hacking" dans lequel se trouve un dossier "Preparation" qui lui même contient un README.md avec le lien d'un pastebin destiné à "Archangel" : <br/>
+On est redirigé vers son compte GitHub, on décide donc d'investir un peu à la recherche de données intéréssantes.<br/>
+<br/>
+Après quelques minutes on peut trouver un répertoire nommé "Hacking" dans lequel se trouve un dossier "Preparation" qui lui-même contient un README.md avec le lien d'un pastebin destiné à "Archangel" : <br/>
 ![alt](images/pastgit.png)
 <br/>
 <br/>
-On accède donc au pastebin qui contient un fichier "go_back_to_the_past" mais qui semble protéger par un mot de passe : </br>
+On accède donc au pastebin qui contient un fichier "go_back_to_the_past" mais qui semble protégé par un mot de passe : </br>
 ![alt](images/past.png)
 ![alt](images/lock.png)
 <br/>
-Au vu du nom du fichier, on se doute qu'il faut utiliser Wayback Machine afin de retourner dans le passer et peut-être trouver de nouvelles informations intéressantes : <br/>
+<br/>
+Au vu du nom du fichier, on se doute qu'il faut utiliser Wayback Machine afin de retourner dans le passé et peut-être trouver de nouvelles informations intéressantes : <br/>
 On colle donc le lien du pastebin dans Wayback qui nous retourne deux snapshots : <br/>
 ![alt](images/snap.png)
+<br/>
 <br/>
 On regarde le contenu du premier snapshot fait le 6 février : <br/>
 ![alt](images/file.png)
 <br/>
+<br/>
 On trouve maintenant un fichier nommé password, on regarde son contenu en cliquant dessus : <br/>
 ![alt](images/content.png)
-</br/>
+<br/>
+<br/>
 On utilise le mot de passe pour débloquer le fichier "go_back_to_the_past" sur le pastebin du présent : <br/>
 ![alt](images/flag.png)
 <br/>
