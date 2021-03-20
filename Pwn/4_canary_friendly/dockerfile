@@ -1,0 +1,18 @@
+FROM debian
+
+RUN apt-get update && apt-get install -y socat
+RUN apt-get install -y libc6-i386
+
+RUN mkdir /home/pwn
+RUN useradd --home=/home/pwn pwn
+
+COPY canary_friendly /home/pwn/
+COPY entry.sh /home/pwn/
+
+RUN chown pwn:pwn /home/pwn/canary_friendly
+
+RUN chmod 4755 /home/pwn/canary_friendly
+RUN chmod 4755 /home/pwn/entry.sh
+
+EXPOSE 7777
+ENTRYPOINT ["/home/pwn/entry.sh"]
