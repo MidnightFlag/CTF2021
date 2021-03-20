@@ -8,7 +8,7 @@ OSINT
 
 Back To The Past 3/3 (Difficulté : Difficile) // 3 essais maximum
 
-Jacques Houzit a été licencié car il consommait du cannabis pendant son temps de travail. Le directeur le suspecte de s'être fourni sur une plaque tournante à l'étranger.
+Jacques Houzit a été licencié car il consommait du cannabis sur son lieu de travail. Le directeur du lycée le suspecte de s'être fourni sur une plaque tournante à l'étranger.
 Retrouvez dans quel pays il est parti cet été.
 
 Format : MCTF{Pays} 
