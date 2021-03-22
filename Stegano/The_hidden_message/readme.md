@@ -24,6 +24,17 @@ A0d3n
 
 ### Solution
 
+1 – Un gif du rover Perseverance contenant une archive ZIP.
+<br/>
+2 – Dans l’archive, on trouve :
+• Un fichier txt
+• Une archive protéger par un mdp
+<br/>
+3 – Sur le fichier txt, on utilise un strings pour trouver le mdp de l’archive.
+<br/>
+4 – Dans l’archive, on trouve la vidéo qu’il faut ouvrir avec Audacity pour trouver le flag cacher dans le spectrogramme.
+<br/>
+
 Ouvrir le fichier au format mp4 dans Audacity<br/>
 
 ![alt](images/mainaudacity.png)
