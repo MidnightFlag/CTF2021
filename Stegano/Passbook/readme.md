@@ -23,6 +23,8 @@ aHR0cHM6Ly93d3cuY3J5cHRvc2VjLm9yZy9kb2NzL0NvdXJzTWFzdGVyMjAxOC9Db3Vyc0N5YmVyU2Vj
 https://www.cryptosec.org/docs/CoursMaster2018/CoursCyberSecuriteMaster_2018_v3.pdf
 4 1 1_13 5 1_90 16 1
 
+les chiffres corresponds à des pages, lignes et numéro du mot sur la ligne
+
 Voilà, vous venez de trouver le flag !
 
 ### Flag
