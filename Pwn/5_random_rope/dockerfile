@@ -17,5 +17,5 @@ RUN chmod 444 /home/pwn/flag.txt
 RUN chmod 4755 /home/pwn/random_rope
 RUN chmod 4755 /home/pwn/entry.sh
 
-EXPOSE 8888
+EXPOSE 9024
 ENTRYPOINT ["/home/pwn/entry.sh"]

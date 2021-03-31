@@ -15,5 +15,5 @@ RUN chown pwn:pwn /home/pwn/prison_break
 RUN chmod 4755 /home/pwn/prison_break
 RUN chmod 4755 /home/pwn/entry.sh
 
-EXPOSE 5555
+EXPOSE 9021
 ENTRYPOINT ["/home/pwn/entry.sh"]

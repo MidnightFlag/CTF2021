@@ -14,5 +14,5 @@ RUN chown pwn:pwn /home/pwn/canary_friendly
 RUN chmod 4755 /home/pwn/canary_friendly
 RUN chmod 4755 /home/pwn/entry.sh
 
-EXPOSE 7777
+EXPOSE 9023
 ENTRYPOINT ["/home/pwn/entry.sh"]
