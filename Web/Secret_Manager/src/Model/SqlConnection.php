@@ -8,8 +8,8 @@ class SqlConnection {
      */
     public function __construct() {
         $dsn = 'mysql:host=localhost; dbname=idor;';
-        $user = 'root';
-        $password = '';
+        $user = 'worty';
+        $password = 'RoIIu9HhH2zPJgANkD4j';
         try
         {
             self::$connection = new PDO($dsn, $user, $password);
