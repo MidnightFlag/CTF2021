@@ -30,7 +30,7 @@ A0d3n
 • Un fichier txt
 • Une archive protéger par un mdp
 <br/>
-3 – Sur le fichier txt, on utilise la commande more pour trouver le mdp de l’archive.
+3 – Sur le GIF, récupérer le mdp de l'archive "Archive.rar"
 <br/>
 4 – Dans l’archive, on trouve la vidéo qu’il faut ouvrir avec Audacity pour trouver le flag cacher dans le spectrogramme.
 <br/>
