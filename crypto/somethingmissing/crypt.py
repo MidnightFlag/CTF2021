@@ -136,22 +136,7 @@ def xor(byteArray1, byteArray2):
 
 def keyExpansion(key,round):
 
-	"""
-	first part of key expansion:
-		- grab the last column
-		- perform a rotWord on it
-		- perform a subWord on it
-		- then xor it with the first column
-		- then xor it with rcon of the corresponding key
-
-	others parts of key expansion:
-		- xor 1 column new key with 2 column original key
-		- xor 2 column new key with 3 column original key
-		- xor 3 column new key with 4 column original key
-
-	"""
 	lastcolumn = key[-4:]
-
 
 	resRcon = rotWord(lastcolumn)
 
@@ -162,7 +147,6 @@ def keyExpansion(key,round):
 	newFirstColumn = xor(res1XOR,rcon(round))
 
 	newKey = newFirstColumn
-
 
 	for i in range(1,4):
 		part1XOR = newKey[-4:]
@@ -184,12 +168,7 @@ def subBytes(aesState):
 def shiftRow(aesState):
 	
 	resState = bytearray()
-	"""
-	0 4 8 c        0 4 8 c
-	1 5 9 d        5 9 d 1
-	2 6 a e    ->  a e 2 6
-	3 7 b f        f 3 7 b
-	"""
+
 	newPosition = [ 0, 5, 0xa, 0xf,4, 9, 0xe, 3,8, 0xd, 2, 7, 0xc, 1, 6, 0xb	]
 
 	for i in newPosition:
@@ -221,35 +200,30 @@ def mixColumn(aesState):
 def AES_Encryption(plainText, AES_key, nbRound):
 
 	res = bytearray()
-	plainTextBytes = plainText #[ord(x) for x in plainText]
+	plainTextBytes = plainText 
 
 	KeyList = [AES_key]
 
 	for i in range(1, nbRound+1):
 		KeyList.append(keyExpansion(KeyList[-1],i))
 
-	# perform the pre whitening
-
 	res = plainTextBytes
 
-	#printStateAES(res)
-	
-	# perform n-1
+
 	for i in range(1,nbRound):
 
-		# subBytes
+
 		res = subBytes(res)
 		
-		# shiftRow
+
 		res = shiftRow(res)
 		
-		# mixcolumn
+
 		res = mixColumn(res)
 		
-		# add roundkey
 		key = KeyList[i]
 
-	# last round doesn't apply a mixColumn
+
 	
 	res = subBytes(res)
 	res = shiftRow(res)
@@ -271,8 +245,7 @@ def main():
 
 	with open("flag.txt","rb") as f_in:
 		flag = f_in.read()
-	#plainText = bytearray.fromhex("00112233445566778899aabbccddeeff")
-
+	
 	cipherText = AES_Encryption(flag, AES_Key,10)
 	
 	with open("cipher.txt","wb") as f_out:
