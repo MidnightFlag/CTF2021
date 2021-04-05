@@ -3,13 +3,18 @@ import sys
 
 def verifyPassword(pwd):
     passwd = "MCTF{p4ssw0rd??}"
+    lastI = 0
     for i in range(len(pwd)):
         if(pwd[i] == passwd[i]):
-            time.sleep(0.5*i)
+            time.sleep(0.2*i)
+            lastI = i
         else:
             print("Wrong pass...")
             return 0
-    print("The time was precious..")
+    if(lastI == len(passwd)):
+       print("Well done..")
+    else:
+       print("Quite good but nop...")
 
 def main():
     print('''
