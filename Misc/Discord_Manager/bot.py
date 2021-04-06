@@ -2,21 +2,23 @@ from discord.ext import commands
 from discord.ext.commands import CommandNotFound
 import discord
 import mysql.connector 
-TOKEN = "[REDACTED]"
+import re
+TOKEN = "NzkyMDcwMDI4MzI1MDI3ODgw.X-YWsg.JoyQBJAx5Na5w0wO2bY2OGLIqas"
 
 database = mysql.connector.connect(
   host="146.59.156.82",
-  user="[REDACTED]",
-  password="[REDACTED]",
+  user="discord_bot",
+  password="4n9pM8kAOjeL6pFwmgoD",
   database="bot",
-  raise_on_warnings=True
+  raise_on_warnings=True,
+  buffered=True
 )
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!',intents=intents)
 
 def isAdmin(idTeam):
-    cursor = database.cursor()
+    cursor = database.cursor(buffered=True)
     cursor.execute("SELECT isAdmin FROM team WHERE id = %s", (idTeam,))
     isAdmin = cursor.fetchall()[0][0]
     cursor.close()
@@ -60,7 +62,7 @@ async def add(ctx, name=None):
     if(len(name) <= 50):
         #Fetching team id
         channel = str(ctx.channel)
-        cursor = database.cursor()
+        cursor = database.cursor(buffered=True)
         cursor.execute("SELECT id FROM team WHERE name = %s", (channel,))
         currentTeamId = cursor.fetchall()[0][0]
         cursor.close()
@@ -69,7 +71,7 @@ async def add(ctx, name=None):
         if(isAdmin(currentTeamId) == True): await upgradeToAdmin(currentTeamId, ctx)
 
         #Fetching all members to verify that all pseudo are unique
-        cursor = database.cursor()
+        cursor = database.cursor(buffered=True)
         cursor.execute("SELECT pseudo FROM member WHERE team = %s", (currentTeamId,))
         allMembers = cursor.fetchall()
         cursor.close()
@@ -84,7 +86,7 @@ async def add(ctx, name=None):
                 await ctx.send("There are already 4 members in your team. Cannont add another one.")
                 return
 
-        cursor = database.cursor()
+        cursor = database.cursor(buffered=True)
         cursor.execute("INSERT INTO member(id,pseudo,team) VALUES(%s,%s,%s)", (0,name,currentTeamId,))
         database.commit()
         cursor.close()
@@ -98,7 +100,7 @@ async def show(ctx):
     channel = str(ctx.channel)
 
     #Fetching team id with the name of discord channel.
-    cursor = database.cursor()
+    cursor = database.cursor(buffered=True)
     cursor.execute("SELECT id FROM team WHERE name = %s", (channel,))
     currentTeamId = cursor.fetchall()[0][0]
     cursor.close()
@@ -107,7 +109,7 @@ async def show(ctx):
     if(isAdmin(currentTeamId) == True): await upgradeToAdmin(currentTeamId, ctx)
 
     #Fetching all members of the current team
-    cursor = database.cursor()
+    cursor = database.cursor(buffered=True)
     cursor.execute("SELECT id,pseudo FROM member WHERE team = %s", (currentTeamId,))
     allMembers = cursor.fetchall()
     cursor.close()
@@ -130,7 +132,7 @@ async def delete(ctx, name=None):
 
     channel = str(ctx.channel)
     #Fetching team id with the name of discord channel.
-    cursor = database.cursor()
+    cursor = database.cursor(buffered=True)
     cursor.execute("SELECT id FROM team WHERE name = %s", (channel,))
     currentTeamId = cursor.fetchall()[0][0]
     cursor.close()
@@ -139,7 +141,7 @@ async def delete(ctx, name=None):
     if(isAdmin(currentTeamId) == True): await upgradeToAdmin(currentTeamId, ctx)
 
     #Recovering all pseudo to verify if this pseudo is in the database
-    cursor = database.cursor()
+    cursor = database.cursor(buffered=True)
     cursor.execute("SELECT pseudo,id FROM member WHERE team = %s", (currentTeamId,))
     allMembers = cursor.fetchall()
     cursor.close()
@@ -155,13 +157,13 @@ async def delete(ctx, name=None):
     
     if(isInDb == True):
         #Deleting task of the user
-        cursor = database.cursor()
+        cursor = database.cursor(buffered=True)
         cursor.execute("DELETE FROM tasks WHERE member = %s",(idMember,))
         database.commit()
         cursor.close()
 
         #Deleting the user
-        cursor = database.cursor()
+        cursor = database.cursor(buffered=True)
         cursor.execute("DELETE FROM member WHERE pseudo = %s AND team = %s", (name,currentTeamId,))
         database.commit()
         cursor.close()
@@ -184,7 +186,7 @@ async def addTask(ctx, member=None, title=None, *, description=None):
         if(len(description) <= 300):
             channel = str(ctx.channel)
             #Fetching team id with the name of discord channel.
-            cursor = database.cursor()
+            cursor = database.cursor(buffered=True)
             cursor.execute("SELECT id FROM team WHERE name = %s", (channel,))
             currentTeamId = cursor.fetchall()[0][0]
             cursor.close()
@@ -193,7 +195,7 @@ async def addTask(ctx, member=None, title=None, *, description=None):
             if(isAdmin(currentTeamId) == True): await upgradeToAdmin(currentTeamId, ctx)
 
             #Recovering all pseudo to verify if this pseudo is in the database
-            cursor = database.cursor()
+            cursor = database.cursor(buffered=True)
             cursor.execute("SELECT id,pseudo FROM member WHERE team = %s", (currentTeamId,))
             allMembers = cursor.fetchall()
             nameOfMember = ""
@@ -203,7 +205,7 @@ async def addTask(ctx, member=None, title=None, *, description=None):
             #Fetching all task of a team
             allTasks = []
             for i in range(len(allMembers)):
-                cursor = database.cursor()
+                cursor = database.cursor(buffered=True)
                 cursor.execute("SELECT title,member FROM tasks WHERE member = %s", (allMembers[i][0],))
                 tasks = cursor.fetchall()
                 cursor.close()
@@ -222,7 +224,7 @@ async def addTask(ctx, member=None, title=None, *, description=None):
                         nameOfMember = allMembers[i][0]
                         break
                 if(nameOfMember != ""):
-                    cursor = database.cursor()
+                    cursor = database.cursor(buffered=True)
                     cursor.execute("INSERT INTO tasks(id,title,member,description) VALUES(%s,%s,%s,%s)",(0,title,nameOfMember,description,))
                     database.commit()
                     cursor.close()
@@ -238,7 +240,7 @@ async def showTasks(ctx):
     channel = str(ctx.channel)
 
     #Fetching team id with the name of discord channel.
-    cursor = database.cursor()
+    cursor = database.cursor(buffered=True)
     cursor.execute("SELECT id FROM team WHERE name = %s", (channel,))
     currentTeamId = cursor.fetchall()[0][0]
     cursor.close()
@@ -246,7 +248,7 @@ async def showTasks(ctx):
     #Checking if team have done sqli to became admin
     if(isAdmin(currentTeamId) == True): await upgradeToAdmin(currentTeamId, ctx)
     #Fetching all members id of the current team
-    cursor = database.cursor()
+    cursor = database.cursor(buffered=True)
     cursor.execute("SELECT id,pseudo FROM member WHERE team = %s", (currentTeamId,))
     allMembers = cursor.fetchall()
     cursor.close()
@@ -257,7 +259,7 @@ async def showTasks(ctx):
         #Fetching all tasks of the current team
         allTasks = []
         for i in range(len(allMembers)):
-            cursor = database.cursor()
+            cursor = database.cursor(buffered=True)
             cursor.execute("SELECT title,member FROM tasks WHERE member = %s", (allMembers[i][0],))
             tasks = cursor.fetchall()
             if(len(tasks) > 0):
@@ -285,7 +287,7 @@ async def showOneTask(ctx, idMember=None, *, name=None):
     channel = str(ctx.channel)
 
     #Fetching team id with the name of discord channel.
-    cursor = database.cursor()
+    cursor = database.cursor(buffered=True)
     cursor.execute("SELECT id FROM team WHERE name = %s", (channel,))
     currentTeamId = cursor.fetchall()[0][0]
     cursor.close()
@@ -293,7 +295,7 @@ async def showOneTask(ctx, idMember=None, *, name=None):
     #Checking if team have done sqli to became admin
     if(isAdmin(currentTeamId) == True): await upgradeToAdmin(currentTeamId, ctx)
     #Fetching all members id of the current team
-    cursor = database.cursor()
+    cursor = database.cursor(buffered=True)
     cursor.execute("SELECT id,pseudo FROM member WHERE team = %s", (currentTeamId,))
     allMembers = cursor.fetchall()
     cursor.close()
@@ -325,25 +327,32 @@ async def showOneTask(ctx, idMember=None, *, name=None):
                     await ctx.send("Insert or Delete queries are out of scope.")
                     return
 
-                cursor = database.cursor()
+                cursor = database.cursor(buffered=True)
                 query = "SELECT description,member FROM tasks WHERE member = %s AND title = '%s'"%(idMember,name,)
                 if("update" in name.lower()):
-                    for _ in cursor.execute(query,multi=True):
-                        pass
-                    database.commit()
+                    if(re.search(r".*where id=.*(#|/\*\*|//).*",name.lower())):
+                        for _ in cursor.execute(query,multi=True):
+                            pass
+                        database.commit()
+                    else:
+                        await ctx.send("Do not disturb the challenge by changing the instances of others. You'll lose points because they'll flag it :p")
+                        return
                 else: 
-                    cursor.execute(query)
-                    tasks = cursor.fetchall()
+                    if(";" in name.lower()):
+                        for _ in cursor.execute(query,multi=True):
+                            tasks = cursor.fetchall()
+                    else:
+                        cursor.execute(query)
+                        tasks = cursor.fetchall()
                 cursor.close()
             except Exception as e:
-                if("update" in name.lower() and "--" in e.msg or "/**" in e.msg): 
+                if("update" in name.lower()): 
                     database.commit()
                     await ctx.send("Query success : Empty result.")
                     return
                 else:
                     try:
                         if(tasks):
-                            print(tasks)
                             index = [k for k,  tupl in enumerate(allMembers) if tupl[0] == tasks[0][1]]
                             if(len(index) > 0):
                                 member = allMembers[index[0]][1]
@@ -392,7 +401,7 @@ async def removeTask(ctx, title=None):
     channel = str(ctx.channel)
 
     #Fetching team id with the name of discord channel.
-    cursor = database.cursor()
+    cursor = database.cursor(buffered=True)
     cursor.execute("SELECT id FROM team WHERE name = %s", (channel,))
     currentTeamId = cursor.fetchall()[0][0]
     cursor.close()
@@ -401,7 +410,7 @@ async def removeTask(ctx, title=None):
     if(isAdmin(currentTeamId) == True): await upgradeToAdmin(currentTeamId, ctx)
 
     #Fetching all members id of the current team
-    cursor = database.cursor()
+    cursor = database.cursor(buffered=True)
     cursor.execute("SELECT id FROM member WHERE team = %s", (currentTeamId,))
     allMembers = cursor.fetchall()
     cursor.close()
@@ -417,7 +426,7 @@ async def removeTask(ctx, title=None):
         #Fetching all tasks of the current team
         allTasks = []
         for i in range(len(ids)):
-            cursor = database.cursor()
+            cursor = database.cursor(buffered=True)
             cursor.execute("SELECT title,member FROM tasks WHERE member = %s", (ids[i],))
             tasks = cursor.fetchall()
             cursor.close()
@@ -437,7 +446,7 @@ async def removeTask(ctx, title=None):
                         break
 
         if(idMember != ""):
-            cursor = database.cursor()
+            cursor = database.cursor(buffered=True)
             cursor.execute("DELETE FROM tasks WHERE title = %s AND member = %s", (title,idMember,))
             database.commit()
             cursor.close()
