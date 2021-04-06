@@ -16,5 +16,5 @@ RUN chown challenger:challenger /chall/chall.py
 RUN chmod 4755 /chall/entry.sh
 RUN chmod 4755 /chall/chall.py
 
-EXPOSE 9002
+EXPOSE 9001
 ENTRYPOINT ["/chall/entry.sh"]
