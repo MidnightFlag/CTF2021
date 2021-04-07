@@ -45,13 +45,19 @@ Puis, on sélectionne l'option "Spectrogramme" dans le menu déroulant de notre 
 ![alt](images/spectrogramme_option.png)
 <br/><br/>
 
-Enfin, on modifie la vitesse de lecture de notre piste audio au maximum.
+On modifie la vitesse de lecture de notre piste audio au maximum.
 
 ![alt](images/modif_vitesse.png)
+<br/><br/>
+
+On trouve un flag obfusquer en César+42 avec l'alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ_{}
+<br/><br/>
+
+On le déchiffre via dcode
 <br/><br/>
 
 Voilà, vous venez de trouver le flag !
 
 ### Flag
 
-MCTF{P3r53v3R4nc3_G0}
+MCTF{Perseverance_Go}
