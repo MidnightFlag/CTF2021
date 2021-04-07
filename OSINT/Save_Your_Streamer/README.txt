@@ -1,7 +1,7 @@
 ------------------------------SAVE YOUR STREAMER--------------------------------------
 
 Un streamer est en danger de mort, quelqu'un veut s'en prendre à lui ! Malheureusement, nous n'avons
-qu'une image à disposition, cepedant, il parait que le streamer aime tellement la ville du lieu de l'image 
+qu'une image à disposition, cependant, il paraît que le streamer aime tellement la ville du lieu de l'image 
 qu'il en a fait une partie de son pseudo ! Trouvez le pseudo de ce streamer et prevenez le du danger qui le 
 guette ! Ensuite découvrez l'identité du malfaiteur !
 
