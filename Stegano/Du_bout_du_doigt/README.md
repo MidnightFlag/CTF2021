@@ -7,7 +7,7 @@ Stéganographie (Difficulté : Difficile)
 
 ### Description
 
-En 1984, un employé de l'entreprise IBM s'est mis à jouer avec leur dernier produit : le clavier M.
+En 1984, un employé de l'entreprise IBM s'est mis à jouer avec leur dernier produit : le clavier M. <br/>
 Pouvez-vous vérifier que la chaîne de caractères qu'il a composé ne contient pas de message caché ?
 
 /!\ Le flag est en majuscule. /!\
