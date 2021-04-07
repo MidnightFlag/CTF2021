@@ -8,7 +8,7 @@ class SqlConnection {
      * SqliteConnection constructor.
      */
     public function __construct() {
-        $dsn = 'mysql:host=localhost;port=3307;dbname=winventory;';
+        $dsn = 'mysql:host=bddwinventory;dbname=winventory;';
         $user = 'worty';
         $password = 'DmYmF4HThEk2jXFIAbq8';
         try

@@ -7,7 +7,7 @@ class SqlConnection {
      * SqliteConnection constructor.
      */
     public function __construct() {
-        $dsn = 'mysql:host=localhost; dbname=idor;';
+        $dsn = 'mysql:host=bddsecretmanager; dbname=idor;';
         $user = 'worty';
         $password = 'RoIIu9HhH2zPJgANkD4j';
         try
