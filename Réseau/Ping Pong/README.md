@@ -36,7 +36,7 @@ On obtient :
 
 > B2BCABB984BDCE919ECE8D9AA0968CA092CF8DCCA08CCC8786A08B979E91A0979A879E82
 
-![alt](images/ping_pong.png)
+![alt](Images/ping_pong.png)
 <br/>
 
 Grâce au hint "c'est la base", on sait qu'on doit changer notre hexa en binaire (base2) :
