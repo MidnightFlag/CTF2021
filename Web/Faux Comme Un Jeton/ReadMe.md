@@ -40,7 +40,9 @@ récupérons aussi le JWT.
 </br>
 
 On utilise <https://jwt.io/> pour voir ce qu’il y a dans le token.
+
 Les JWT utilisent comme algorithme du RS256.
+
 Ils ont en data aussi les variables user, exp, isAdmin.
 
 ![alt](images/jwtio.png)
