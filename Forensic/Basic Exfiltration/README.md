@@ -8,7 +8,7 @@ Forensic (Difficulté : Facile)
 
 ### Description
 
-Un hacker vous envoie une capture réseau du traffic de son pc.<br/>
+Un hacker vous envoie une capture réseau du traffic de son PC.<br/>
 Il pense que vous ne trouverez rien d'intéressant dessus. Pouvez-vous lui prouver le contraire ?
 
 Format : MCTF{}
