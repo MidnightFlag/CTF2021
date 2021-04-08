@@ -9,7 +9,7 @@ Réseau
 Vous avez récupéré un PC particulièrement vérolé...<br/> 
 Le groupe TA505 est particulièrement actif en ce moment, vous pouvez vous rapprocher des autorités compétentes pour en savoir plus
 
-Format : mctf{}
+Format : MCTF{}
 
 ### Auteur 
 

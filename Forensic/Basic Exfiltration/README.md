@@ -8,7 +8,7 @@ Forensic (Difficulté : Facile)
 
 ### Description
 
-Un hacker vous envoie une capture réseau du traffic de son pc.
+Un hacker vous envoie une capture réseau du traffic de son PC.<br/>
 Il pense que vous ne trouverez rien d'intéressant dessus. Pouvez-vous lui prouver le contraire ?
 
 Format : MCTF{}
@@ -23,7 +23,7 @@ Lorsque l'on regarde le traffic de la capture Wireshark, on remarque des trames 
 
 On applique alors un filtre pour ne voir que le traffic HTTP.
 
-On remarque alors qu'une image weapons.png a été récupéré par la victime.
+On remarque alors qu'une image weapons.png a été récupéré par le hacker.
 On récupère via Fichier -> Exporter Objets --> HTTP --> enregister (en séléctionnant l'image weapons.png)
 
 On l'ouvre et le flag est affiché !
