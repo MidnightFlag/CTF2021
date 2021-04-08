@@ -44,6 +44,9 @@ des jetons.
 
 <https://github.com/FlorianPicca/JWT-Key-Recovery>
 
+![alt](images/jwtkeyrecovery.png)
+</br>
+
 Maintenant que nous avons réussi à récupérer la clé public RSA, nous
 allons réaliser la vulnérabilités ou il est possible de changer le
 header, passant de RS256 à HS256.\
