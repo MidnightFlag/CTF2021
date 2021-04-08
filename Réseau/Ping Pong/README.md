@@ -26,7 +26,7 @@ Tout d'abord, on ouvre la capture ping_pong.pcap dans l'outil wireshark. On retr
 
 Ensuite on remarque que la trame 49 est différentes des autres puisque qu'on retrouve de la data à l'intérieur. On va donc exfiltrer la data avec tshark qui est la version CLI de wireshark.
 
-exfiltrer la data avec la commande : 
+Exfiltrer la data avec la commande : 
 
 ```
 tshark -r toto.pcap -Y "icmp" -T fields -e data.text | sort | uniq -c
@@ -67,7 +67,7 @@ print("Inversed string is ",
 
 > 010011010100001101010100010001100111101101000010001100010110111001100001001100010111001001100101010111110110100101110011010111110110110100110000011100100011001101011111011100110011001101111000011110010101111101110100011010000110000101101110010111110110100001100101011110000110000101111101
 
-puis on refait un binaire to hexacécimal :
+Puis on refait un binaire to hexacécimal :
 
 > 4D4354467B42316E613172655F69735F6D3072335F733378795F7468616E5F686578617D
 
