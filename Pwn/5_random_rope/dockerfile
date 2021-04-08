@@ -1,0 +1,21 @@
+FROM debian
+
+RUN apt-get update && apt-get install -y socat
+RUN apt-get install -y libc6-i386
+
+RUN mkdir /home/pwn
+RUN useradd --home=/home/pwn pwn
+
+COPY random_rope /home/pwn/
+COPY entry.sh /home/pwn/
+COPY flag.txt /home/pwn/
+
+RUN chown pwn:pwn /home/pwn/random_rope
+RUN chown pwn:pwn /home/pwn/flag.txt
+RUN chmod 444 /home/pwn/flag.txt
+
+RUN chmod 4755 /home/pwn/random_rope
+RUN chmod 4755 /home/pwn/entry.sh
+
+EXPOSE 9024
+ENTRYPOINT ["/home/pwn/entry.sh"]

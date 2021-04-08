@@ -7,9 +7,9 @@ class SqlConnection {
      * SqliteConnection constructor.
      */
     public function __construct() {
-        $dsn = 'mysql:host=localhost; dbname=idor;';
-        $user = 'root';
-        $password = '';
+        $dsn = 'mysql:host=bddsecretmanager; dbname=idor;';
+        $user = 'worty';
+        $password = 'RoIIu9HhH2zPJgANkD4j';
         try
         {
             self::$connection = new PDO($dsn, $user, $password);

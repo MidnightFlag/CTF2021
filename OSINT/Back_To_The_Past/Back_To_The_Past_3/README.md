@@ -6,9 +6,9 @@ OSINT
 
 ### Description
 
-Back To The Past 3/3 (Difficulté : Difficile) // 3 essais maximum
+Back To The Past 3/3 (Difficulté : Moyen) // 3 essais maximum
 
-Jacques Houzit a été licencié car il consommait du cannabis pendant son temps de travail. Le directeur le suspecte de s'être fourni sur une plaque tournante à l'étranger.
+Jacque Houzit a été licencié car il consommait du cannabis sur son lieu de travail. Le directeur du lycée le suspecte de s'être fourni sur une plaque tournante à l'étranger.
 Retrouvez dans quel pays il est parti cet été.
 
 Format : MCTF{Pays} 
@@ -19,7 +19,7 @@ Kazuno
 
 ### Solution
 
-Grâce au challenge précédent, nous avons maintenant accès au compte Twitter de Jacques Houzit.<br/><br/>
+Grâce au challenge précédent, nous avons maintenant accès au compte Twitter de Jacque Houzit.<br/><br/>
 On fouille un peu et on remarque qu'il est suivit par "Archangel", celui avec qui il avait eu rendez-vous à Rennes le 7/02/2021 :<br/>
 ![alt](images/follow.png)
 <br/>
@@ -27,7 +27,7 @@ On fouille un peu et on remarque qu'il est suivit par "Archangel", celui avec qu
 On se rend donc sur son compte Twitter à la recherche d'infomations intéressante.<br/>
 On peut remarquer deux choses intéressantes :
 - Le mail de contact épinglé sur son Twitter<br/>
-- Un Tweet où l'on peut comprendre qui l'est parti en vacances avec Jacques Houzit<br/><br/>
+- Un Tweet où l'on peut comprendre qui l'est parti en vacances avec Jacque Houzit<br/><br/>
 ![alt](images/contact.png)
 ![alt](images/tweet.png)
 <br/>
@@ -45,7 +45,7 @@ Bingo ! Ghunt nous retourne même un lien vers un avis posté par ce compte Goog
 ![alt](images/avis.png)
 <br/><br/>
 
-L'avis dit qu'il s'est rendu sur le lac de Rara au Népal avec un ami à lui cet été. Or, sur son profil tweeter on a pu lire un tweet où il repensait à un voyage avec Jacques Houzit.
+L'avis dit qu'il s'est rendu sur le lac de Rara au Népal avec un ami à lui cet été. Or, sur son profil tweeter on a pu lire un tweet où il repensait à un voyage avec Jacque Houzit.
 
 ### Flag
  

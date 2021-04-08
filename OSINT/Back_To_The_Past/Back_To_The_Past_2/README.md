@@ -8,7 +8,8 @@ OSINT
 
 Back To The Past 2/3 (Difficulté : Moyen)
 
-Grâce à vos informations, le directeur du lycée a pu retrouver Jacques Houzit en consultant l'historique des caméras de la ville de Rennes. Il agissait bizarrement et était constamment sur son téléphone. Avec les informations que vous avez récoltées, faites votre possible pour retrouver son compte Twitter.
+Grâce à vos informations, le directeur du lycée a pu retrouver Jacque Houzit en consultant l'historique des caméras de la ville de Rennes. <br/>
+Il agissait bizarrement et était constamment sur son téléphone. Avec les informations que vous avez récoltées, faites votre possible pour retrouver son compte Twitter.
 
 Format : MCTF{NomUtilisateur}
 

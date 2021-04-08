@@ -1,15 +1,16 @@
 <?php
 class SqlConnection {
 
+
     private static $connection;
 
     /**
      * SqliteConnection constructor.
      */
     public function __construct() {
-        $dsn = 'mysql:host=localhost; dbname=winventory;';
-        $user = 'root';
-        $password = '';
+        $dsn = 'mysql:host=bddwinventory;dbname=winventory;';
+        $user = 'worty';
+        $password = 'DmYmF4HThEk2jXFIAbq8';
         try
         {
             self::$connection = new PDO($dsn, $user, $password);

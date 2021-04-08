@@ -1,22 +1,20 @@
-FROM ubuntu:latest
+FROM ubuntu
 
-RUN apt-get update && apt upgrade -y
-RUN apt-get install -y socat
-RUN groupadd ctf
+RUN apt update && apt upgrade -y
+RUN apt install python3 socat vim -y
+RUN groupadd user
 
-RUN mkdir /pwn
-COPY ./chall.py /pwn/chall.py
-COPY ./entry.sh /pwn/
-COPY ./secret_file.txt /secret_file.txt
+RUN mkdir /chall
+COPY ./chall.py /chall
+COPY ./entry.sh /chall
+COPY ./my_v3ry_s3cr3t_f1l3.txt /
 
-RUN useradd -G ctf --home=/pwn pwnuser
-RUN useradd -G ctf --home=/pwn pwnflag
+RUN useradd -G user --home=/chall challenger
 
-RUN chown pwnflag:pwnflag /pwn/chall
-RUN chown pwnflag:pwnflag /pwn
+RUN chown challenger:challenger /chall/chall.py
 
-RUN chmod 4755 /pwn/chall
-RUN chmod 4755 /pwn/entry.sh
+RUN chmod 4755 /chall/entry.sh
+RUN chmod 4755 /chall/chall.py
 
-EXPOSE 7000
-ENTRYPOINT ["/pwn/entry.sh"]
+EXPOSE 9001
+ENTRYPOINT ["/chall/entry.sh"]
