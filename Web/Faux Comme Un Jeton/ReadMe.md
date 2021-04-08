@@ -23,11 +23,21 @@ Huriken
 Quand on arrive sur ce challenge, nous avons les identifiants et les mot
 de passes de deux utilisateurs différents.
 
+
+![alt](images/login.png)
+</br>
+
 En appuyant sur F12 nous pouvons voir dans l’onglet stockage qu’il
 existe une variable token
 
+![alt](images/User1.png)
+</br>
+
 Nous effectuons la même chose avec le second utilisateur et nous
 récupérons aussi le JWT.
+
+![alt](images/user2.png)
+</br>
 
 On utilise <https://jwt.io/> pour voir ce qu’il y a dans le token.
 ![alt](images/jwtio.png)
