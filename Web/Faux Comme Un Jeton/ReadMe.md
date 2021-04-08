@@ -65,6 +65,9 @@ header, passant de RS256 à HS256.\
 Pour ce faire, il est possible de signer notre token avec la clé
 publique obtenue.
 
+![alt](images/ScriptVulnJWT.png)
+</br>
+
 ***PS = il est important d’utiliser la version pyJWT 0.4.3 afin de pouvoir
 signer avec la clé publique.***
 
@@ -72,6 +75,9 @@ On signe notre JWT avec la clé publique obtenu et on change le isAdmin=0
 en isAdmin=1.
 
 On envoie la requête POST avec le token modifié :
+
+![alt](images/flag.png)
+</br>
 
 curl -X POST -b
 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaXNBZG1pbiI6MX0.SaXCQM13Lys7LH0OOG1PmRg9DVVjvISzz0EpKEnV4LE'
