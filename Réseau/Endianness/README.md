@@ -71,6 +71,6 @@ Puis on refait un binaire to hexacécimal :
 
 > 4D4354467B42316E613172655F69735F6D3072335F733378795F7468616E5F686578617D
 
-Et enfin héxadécimal to ascii text gggggg !!!! : 
+Et enfin héxadécimal to ascii text : 
 
 > MCTF{B1na1re_is_m0r3_s3xy_than_hexa}
