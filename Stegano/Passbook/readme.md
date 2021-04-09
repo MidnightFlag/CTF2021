@@ -6,8 +6,7 @@ Stegano
 
 ### Description
 
-On vous a appporté une clé USB retrouvé sur le parking, elle contient l'image suivante.
-
+Vous avez trouvé une clé USB retrouvé sur un parking, elle contient l'image suivante.
 Votre intuition vous dit que cette image renferme des secrets, percer-les !
 
 Format du flag: MCTF{x_x_x}
