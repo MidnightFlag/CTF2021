@@ -12,7 +12,10 @@ Format : MCTF{}
 
 ## Hints
 
-Hint 1 : "C'est la base !"
+Hint 1 :
+
+"Basique, simple, simple, basique
+Vous n'avez pas les bases, vous n'avez pas les bases" Orelsan. 
 
 ## Auteur
 
