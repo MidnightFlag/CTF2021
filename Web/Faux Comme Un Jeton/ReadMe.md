@@ -58,8 +58,7 @@ des jetons.
 ![alt](images/jwtkeyrecovery.png)
 </br>
 
-Maintenant que nous avons réussi à récupérer la clé public RSA, nous allons réaliser la vulnérabilité de la confusion des clés HS/RSA où il est possible de changer le header, passant de RS256 à HS256. Et de signer notre token avec la clé publique obtenue.
-Pour ce faire, il est possible de signer notre token avec la clé publique obtenue.
+Maintenant que nous avons réussi à récupérer la clé public RSA, nous allons réaliser la vulnérabilité de la confusion des clés HS/RSA où il est possible de changer le header, passant de RS256 à HS256. Pour ce faire, nous signons notre token avec la clé publique obtenue.
 
 ![alt](images/ScriptVulnJWT.png)
 </br>
