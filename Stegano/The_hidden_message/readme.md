@@ -50,7 +50,7 @@ On modifie la vitesse de lecture de notre piste audio au maximum.
 ![alt](images/modif_vitesse.png)
 <br/><br/>
 
-On trouve un flag obfusquer en César+42 avec l'alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ_{}
+On trouve un flag obfusquer en Vigenère avec l'alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ et la clé CLE
 <br/><br/>
 
 On le déchiffre via dcode
