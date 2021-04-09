@@ -6,7 +6,7 @@ Réseau
 
 ## Description
 
-Lors d'une partie de Ping-Pong, un échange à été disputer avec beaucoup d'intensité par les joueurs. Essayer de comprendre pourquoi :)
+Lors d'une partie de Ping-Pong, un échange a été disputé avec beaucoup d'intensité. Essayez de comprendre pourquoi :)
 
 Format : MCTF{}
 
