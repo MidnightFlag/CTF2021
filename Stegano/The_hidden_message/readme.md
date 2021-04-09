@@ -60,4 +60,4 @@ Voilà, vous venez de trouver le flag !
 
 ### Flag
 
-MCTF{Perseverance_Go}
+MCTF{Perseverance}
