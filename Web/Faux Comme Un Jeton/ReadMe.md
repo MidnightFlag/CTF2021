@@ -7,7 +7,7 @@ Web
 
 ### <span id="anchor-1"></span>Description
 
-Un jeune codeur débutant vient de commencer à coder, il a implémenté un
+Un jeune développeur débutant vient de commencer à coder un site web, il a implémenté un
 processus d’authentification afin de segmenter les droits utilisateurs.
 Mais il débute il ne connait pas encore les risques de son code.
 
