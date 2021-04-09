@@ -6,7 +6,7 @@ Réseau
 
 ## Description
 
-Lors d'une partie de Ping-Pong, un échange à été très disputer avec beaucoup d'intensité par les joueurs. Essayer de comprendre pourquoi :)
+Lors d'une partie de Ping-Pong, un échange à été disputer avec beaucoup d'intensité par les joueurs. Essayer de comprendre pourquoi :)
 
 Format : MCTF{}
 
@@ -20,7 +20,7 @@ N3oWind
 
 ## Solution
 
-Tout d'abord, on ouvre la capture ping_pong.pcap dans l'outil wireshark. On retrouve une multitutde d'échange du protocol ICMP qui correspond à un ping. On peut commencer par filtrer la capture sur les requêtes ou sur les réponses. Pour cela "icmp.type==8" (request) ou "icmp.type==0" (reply)
+Tout d'abord, on ouvre la capture Endianness.pcap dans l'outil wireshark. On retrouve une multitutde d'échange du protocol ICMP qui correspond à un ping. On peut commencer par filtrer la capture sur les requêtes ou sur les réponses. Pour cela "icmp.type==8" (request) ou "icmp.type==0" (reply)
 
 Ensuite on remarque que la trame 39 est différentes des autres. On va donc exfiltrer la data avec tshark qui est la version CLI de wireshark.
 
@@ -70,6 +70,6 @@ puis on refait un binaire to hexacécimal :
 
 > 4d4354467b42316e6172795f69735f6d3072335f733378795f7468616e5f68337861643363316d616c7d
 
-Et enfin héxadécimal to ascii text gggggg !!!! : 
+Et enfin héxadécimal to ascii text :) 
 
 > MCTF{B1nary_is_m0r3_s3xy_than_h3xad3c1mal}
