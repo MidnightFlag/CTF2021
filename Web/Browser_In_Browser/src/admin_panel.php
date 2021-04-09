@@ -1,5 +1,6 @@
 <?php
 session_start();
+//MCTF{ssrf_t0_4cc3ss_4dm1n_p4rt}
 if($_SERVER['REMOTE_ADDR'] !== "127.0.0.1"){
     die("<!DOCTYPE html><html><head><title>Unauthorize</title></head><body><h1>403 Forbidden.</h1></body></html>");
 }
@@ -13,21 +14,6 @@ if(!isset($_GET['action'])){
             include($_GET['file'].".php");
         }else{
             die('Missing file.');
-        }
-    }
-    if($_GET['action'] === 's3cr3t4ct10n'){
-        if(isset($_GET['cmd'])){
-            //I prefer to separate my preg match call as I can see them, yes, I am a beginner with PHP :p
-            if(preg_match("/shell_exec/i",$_GET['cmd']) || preg_match("/system/i",$_GET['cmd']) || preg_match("/exec/i",$_GET['cmd'])) die('Unauthorize function.');
-            else{
-                try{
-                    var_dump(eval($_GET['cmd']));
-                }catch(ParseError $e){
-                    echo("Error in your function call.");
-                }
-            } 
-        }else{
-            die('Missing cmd.');
         }
     }
 }
