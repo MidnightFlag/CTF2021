@@ -23,11 +23,11 @@ Lorsque l'on regarde le traffic de la capture Wireshark, on remarque des trames 
 
 On applique alors un filtre pour ne voir que le traffic HTTP.
 
-On remarque alors qu'une image weapons.png a été récupéré par le hacker.
-On récupère via Fichier -> Exporter Objets --> HTTP --> enregister (en séléctionnant l'image weapons.png)
+On remarque alors qu'une image britney.jpg a été récupéré par le hacker.
+On récupère via Fichier -> Exporter Objets --> HTTP --> enregister (en séléctionnant l'image britney.jpg)
 
 On l'ouvre et le flag est affiché !
 
 ### Flag
  
-MCTF{W34p0ns_4r3_N0t_s3cUr3D}
+MCTF{Br1tn3Y_Sp3aRs_F4n}
