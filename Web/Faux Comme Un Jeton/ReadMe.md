@@ -10,7 +10,6 @@ Web
 Un jeune codeur débutant vient de commencer à coder, il a implémenté un
 processus d’authentification afin de segmenter les droits utilisateurs.
 Mais il débute il ne connait pas encore les risques de son code.
-Vous devez trouver la vulnérabilité de son application.
 
 Format : MCTF{}
 
