@@ -1,5 +1,7 @@
-FROM hmlio/vaas-cve-2014-0160
+FROM kacperzuk/heartbleed-testbed-nginx-bleed
 
-RUN rm /var/www/index.html
+RUN rm /workdir/html/confidential.txt
 
-COPY ./src/ /var/www/ 
+COPY ./src/ /workdir/html/
+
+ENTRYPOINT ['/bin/sh -c echo "Nginx started" && /usr/local/nginx/sbin/nginx']

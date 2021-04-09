@@ -36,7 +36,7 @@ def login():
             )
 
         resp = make_response(render_template('index.html'))
-        resp.set_cookie('token',token.decode())
+        resp.set_cookie('token',token)
         return resp
     else:
         return make_response('Invalid credentials.', 403, {'WWW-Authenticate': 'Basic realm "Login"'})
