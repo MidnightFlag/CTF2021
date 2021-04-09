@@ -79,3 +79,6 @@ curl -X POST -b
 <http://127.0.0.1:5000/admin>
 
 Et le flag est là, MCTF{r54W17H7W070K3N}.
+
+### <span id="anchor-4"></span>Flag
+MCTF{r54W17H7W070K3N}
