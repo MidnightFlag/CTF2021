@@ -1,6 +1,7 @@
 FROM ubuntu
 
 RUN apt update && apt upgrade -y
+RUN apt update
 RUN apt install python3 socat vim -y
 RUN groupadd user
 

@@ -45,13 +45,16 @@ def login():
 @app.route('/admin', methods=['POST'])
 def admin():
     token = request.cookies['token']
-    data = jwt.decode(token, public_key)
-    if data:
-        if data['isAdmin'] == 1:
-            return render_template('admin.html')
+    try:
+        data = jwt.decode(token, public_key)
+        if data:
+            if data['isAdmin'] == 1:
+                return render_template('admin.html')
+            else:
+                return make_response('Unable to verify', 403, {'WWW-Authenticate': 'Basic realm "Login"'})
         else:
             return make_response('Unable to verify', 403, {'WWW-Authenticate': 'Basic realm "Login"'})
-    else:
+    except:
         return make_response('Unable to verify', 403, {'WWW-Authenticate': 'Basic realm "Login"'})
 
 
