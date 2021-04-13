@@ -34,7 +34,7 @@ tshark -2 -r Endianness_PwnZoo.pcapng -Y icmp -R 'ip.dst == 192.168.1.12' -T fie
 
 On obtient :
 
-![alt](Images/Endianness.png)
+![alt](Images/Endianness1.png)
 <br/>
 
 Par curiosité j'essaye de décoder l'hexa sur cyberchef, rien d'extraordinaire pour les 4 trames qui semble contenir quelque chose, cependant quand je decode "6f6e655f6c697472655f657175616c5f6f6e655f627974655f73305f6f6e655f70696e74655f657175616c5f3f" j'obtiens quelque chose en ascii qui ressemble fortement à un "INT"
@@ -51,7 +51,7 @@ tshark -2 -r Endianness_PwnZoo.pcapng -Y icmp -R 'ip.dst == 192.168.1.12 && ! da
 
 On obtient donc uniquement l'hexa contenu dans nos 4 trames vu qu'on a décider d'exclure les trames qui contenait l'indice "one_litre_equal_one_byte_s0_one_pinte_equal_?". 
 
-![alt](Images/Endianness.png)
+![alt](Images/Endianness2.png)
 <br/>
 
 On rassemble l'hexa des quatres trames ce qui nous donne : 
