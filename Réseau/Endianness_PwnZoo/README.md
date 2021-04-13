@@ -20,13 +20,13 @@ N3oWind
 
 ## Solution
 
-Tout d'abord, on ouvre la capture Endianness_PWNzoo.pcap dans l'outil wireshark. On retrouve une multitutde d'échange du protocol ICMP qui correspond à un ping. On peut commencer par filtrer la capture sur les requêtes ou sur les réponses. Pour cela "icmp.type==8" (request) ou "icmp.type==0" (reply)
+Tout d'abord, on ouvre la capture Endianness_PwnZoo.pcap dans l'outil wireshark. On retrouve une multitutde d'échange du protocol ICMP qui correspond à un ping. On peut commencer par filtrer la capture sur les requêtes ou sur les réponses. Pour cela "icmp.type==8" (request) ou "icmp.type==0" (reply)
 
 Pour commencer, je décide d'extraire la data dans la plupart des trames, on retrouve 
 
 Ensuite on remarque que les trames 15 / 43 / 61 et 91 sont différentes des autres. On va donc exfiltrer la data de l'ensemble des trames avec tshark qui est la version CLI de wireshark.
 
-exfiltrer la data avec la commande : 
+Exfiltrer la data avec la commande : 
 
 ```
 tshark -2 -r Endianness_PwnZoo.pcapng -Y icmp -R 'ip.dst == 192.168.1.12' -T fields -e data.text | uniq -c > esna
@@ -51,10 +51,10 @@ tshark -2 -r Endianness_PwnZoo.pcapng -Y icmp -R 'ip.dst == 192.168.1.12 && ! da
 
 On obtient donc uniquement l'hexa contenu dans nos 4 trames vu qu'on a décider d'exclure les trames qui contenait l'indice "one_litre_equal_one_byte_s0_one_pinte_equal_?". 
 
-![alt](Images/Endianness2.png)
+![alt](Images/Endianness.png)
 <br/>
 
-On rassemble la data en hexa contenu dans les quatres trames ce qui nous donne : 
+On rassemble l'hexa des quatres trames ce qui nous donne : 
 
 > D7C616D61336334616873386F5E6168647F597873337F5332703D6F53796F5972716E61324B7644534D4
 
