@@ -43,7 +43,7 @@ Par curiosité j'essaye de décoder l'hexa sur cyberchef, rien d'extraordinaire 
 one_litre_equal_one_byte_s0_one_pinte_equal_?
 ```
 
-Ensuite, grâce au hint "c'est la base", on sait qu'on doit changer notre hexa en binaire (base2) et pour cela je décide tout d'abord de mettre bout à bout la data de chaque trame icmp grâce à la commande :
+Ensuite, grâce au hint "c'est la base", on sait qu'on doit changer notre hexa en binaire (base2) et pour cela je décide tout d'abord de mettre bout à bout la data de chaque trame icmp puis grâce à la commande :
 
 ```
 tshark -2 -r Endianness_PwnZoo.pcapng -Y icmp -R 'ip.dst == 192.168.1.12 && ! data.text contains "6f6e655f6c697472655f657175616c5f6f6e655f627974655f73305f6f6e655f70696e74655f657175616c5f3f"' -T fields -e data.text | uniq -c > esna
