@@ -54,7 +54,7 @@ On obtient donc uniquement l'hexa contenu dans nos 4 trames vu qu'on a décider 
 ![alt](Images/Endianness2.png)
 <br/>
 
-On rassemble l'hexa des quatres trames ce qui nous donne : 
+On rassemble la data en hexa contenu dans les quatres trames ce qui nous donne : 
 
 > D7C616D61336334616873386F5E6168647F597873337F5332703D6F53796F5972716E61324B7644534D4
 
