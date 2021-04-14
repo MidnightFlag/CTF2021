@@ -51,7 +51,7 @@ tshark -2 -r Endianness_PwnZoo.pcapng -Y icmp -R 'ip.dst == 192.168.1.12 && ! da
 
 On obtient donc uniquement l'hexa contenu dans nos 4 trames vu qu'on a décider d'exclure les trames qui contenait l'indice "one_litre_equal_one_byte_s0_one_pinte_equal_?". 
 
-![alt](Images/Endianness.png)
+![alt](Images/Endianness2.png)
 <br/>
 
 On rassemble l'hexa des quatres trames ce qui nous donne : 
