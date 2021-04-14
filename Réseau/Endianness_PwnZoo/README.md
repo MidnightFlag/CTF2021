@@ -22,7 +22,7 @@ N3oWind
 
 Tout d'abord, on ouvre la capture Endianness_PwnZoo.pcap dans l'outil wireshark. On retrouve une multitutde d'échange du protocol ICMP qui correspond à un ping. On peut commencer par filtrer la capture sur les requêtes ou sur les réponses. Pour cela "icmp.type==8" (request) ou "icmp.type==0" (reply)
 
-Pour commencer, je décide d'extraire la data dans la plupart des trames, on retrouve 
+Pour commencer, je décide d'extraire la data dans la plupart des trames. 
 
 Ensuite on remarque que les trames 15 / 43 / 61 et 91 sont différentes des autres. On va donc exfiltrer la data de l'ensemble des trames avec tshark qui est la version CLI de wireshark.
 
