@@ -3,12 +3,12 @@ from discord.ext.commands import CommandNotFound
 import discord
 import mysql.connector 
 import re
-TOKEN = "NzkyMDcwMDI4MzI1MDI3ODgw.X-YWsg.JoyQBJAx5Na5w0wO2bY2OGLIqas"
+TOKEN = "[REDACTED]"
 
 database = mysql.connector.connect(
-  host="146.59.156.82",
-  user="discord_bot",
-  password="4n9pM8kAOjeL6pFwmgoD",
+  host="[REDACTED]",
+  user="[REDACTED]",
+  password="[REDACTED]",
   database="bot",
   raise_on_warnings=True,
   buffered=True
